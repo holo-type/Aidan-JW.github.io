@@ -58,7 +58,7 @@
     line-height: 150%;
 }
 
-.report {
+.photos {
     text-align: center;
     margin: auto;
     width: 25%;
@@ -67,7 +67,7 @@
     line-height: 10px;
 }
 
-.reportLink {
+.photosLink {
     color: white;
     text-decoration: none;
     font-family: Verdana, Arial;
@@ -98,7 +98,7 @@ footer {
   }
 
   .siteFooter {
-    background-color: #87cefa;
+    background-color: black;
     height: 100px;
     width: 100%;
     text-align: center;
