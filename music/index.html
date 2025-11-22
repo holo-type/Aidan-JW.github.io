@@ -25,6 +25,26 @@
 
         <audio id="audioPlayer" src="../audio/Chattanooga Riff.mp3"></audio>
 <img src="../photos/construction5.webp" onclick="document.getElementById('audioPlayer').play()">
+
+        <a href="#" onclick="showPlayer(); return false;">Play Chattanooga Riff</a>
+
+<div id="audioContainer" style="display:none; margin-top:10px;">
+    <audio id="audioPlayer" controls>
+        <source src="../audio/Chattanooga Riff.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+function showPlayer() {
+    // Show the hidden player
+    document.getElementById("audioContainer").style.display = "block";
+
+    // Start playback
+    const audio = document.getElementById("audioPlayer");
+    audio.play();
+}
+</script>
+        
       </div>
     </br>
     </br>
