@@ -97,6 +97,11 @@ body {
     line-height: 0%;
 }
 
+.photo {
+    background-color: white;
+
+}
+
 /*footer {
     background-color: black;
     height: 100%;
@@ -124,6 +129,7 @@ body {
     left: 0;
 
   }*/
+
 
 
 
