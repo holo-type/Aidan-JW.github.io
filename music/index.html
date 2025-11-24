@@ -20,7 +20,7 @@
     </div>
 
     <div class="content">
-
+<!--
         <a href="#" class="audio-link" data-src="../audio/Chattanooga Riff.mp3">Chattanooga Riff</a><br>
         <a href="#" class="audio-link" data-src="../audio/Improv 11-5.mp3">Improv 11-5.mp3</a><br>
         <a href="#" class="audio-link" data-src="../audio/Improv 11-5(2).mp3">Improv 11-5(2).mp3</a><br>
@@ -38,6 +38,45 @@ function showPlayer() {
     const audio = document.getElementById("audioPlayer");
     audio.play();
 }
+</script> -->
+
+      <!-- audio links -->
+<a href="#" class="audio-link" data-src="../audio/Chattanooga Riff.mp3">Chattanooga Riff</a><br>
+<a href="#" class="audio-link" data-src="../audio/Improv 11-5.mp3">Improv 11-5.mp3</a><br>
+<a href="#" class="audio-link" data-src="../audio/Improv 11-5(2).mp3">Improv 11-5(2).mp3</a><br>
+
+<!-- shared audio player -->
+<div id="audioContainer" style="display:none; margin-top:10px;">
+    <audio id="audioPlayer" controls></audio>
+</div>
+
+<script>
+// Simple working version:
+// - One audio player
+// - Click link → moves player under that link and plays
+
+document.querySelectorAll(".audio-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const audioSrc = this.dataset.src;
+        const audioPlayer = document.getElementById("audioPlayer");
+        const audioContainer = document.getElementById("audioContainer");
+
+        // Set audio file
+        audioPlayer.src = audioSrc;
+
+        // Move the audio container right under the clicked link
+        this.insertAdjacentElement("afterend", audioContainer);
+
+        // Show + load + play
+        audioContainer.style.display = "block";
+        audioPlayer.load();
+        audioPlayer.play().catch(() => {
+            // If autoplay is blocked, user just clicks play manually
+        });
+    });
+});
 </script>
 
     </div>
