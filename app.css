@@ -74,7 +74,7 @@ body {
 }
 
 .poetry {
-    width: 75%;
+    display: table;
     background-color: white;
     white-space: pre-line;
     font-style: italic;
@@ -143,6 +143,7 @@ body {
     left: 0;
 
   }*/
+
 
 
 
