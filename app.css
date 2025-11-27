@@ -76,7 +76,7 @@ body {
 .poetry {
     font-style: italic;
     color: black;
-    font-size: large;
+    font-size: small;
     padding-left: 20%;
     padding-right: 20%;
     line-height: 150%;
@@ -140,6 +140,7 @@ body {
     left: 0;
 
   }*/
+
 
 
 
